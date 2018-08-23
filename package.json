@@ -1,0 +1,23 @@
+{
+  "name": "testing123",
+  "version": "1.0.0",
+  "description": "Testing first computer program",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolphinCommando/testing123.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dolphinCommando/testing123/issues"
+  },
+  "homepage": "https://github.com/dolphinCommando/testing123#readme"
+}
