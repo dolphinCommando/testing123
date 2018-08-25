@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-var speak = require('../speak');
+var speak = require('../app/speak');
 
 describe('Speak', function() {
   it('should be object', function() {
