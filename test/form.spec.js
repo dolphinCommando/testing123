@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
-var form = require('../app/form');
-
+var Form = require('../app/form');
+var form = new Form();
 describe('Form', function() {
   describe('#verifyUsername()', function() {
     it('should not accept empty string', function() {
@@ -18,6 +18,9 @@ describe('Form', function() {
     it('should not accept strings length > 12', function(){
       assert.throws(() => form.verifyUsername('spacewizard421'));
     })
+    it('should accept this username', function() {
+      assert.isOk(form.verifyUsername('sanitycheck'));
+    })
   })
   describe('#verifyPassword()', function() {
     it('should not accept empty string', function() {
@@ -34,16 +37,19 @@ describe('Form', function() {
     it('should not accept strings length > 20', function() {
       assert.throws(() => form.verifyPassword('rickandmortyistoosmart4U'));
     })
+    it('should accept this password', function() {
+      assert.isOk(form.verifyPassword('mochaChai820'));
+    })
   })
   
   describe('#getUsernameRegEx()', function() {
     it('should have this regex', function() {
-      assert.equal(form.getUsernameRegEx(), '^[a-z]\w+$');
+      assert.equal(form.userRegEX, '^[a-z]\w+$');
     })
   })
   describe('#getPasswordRegEx()', function() {
     it('should have this regex', function() {
-      assert.equal(form.getPasswordRegEx(), '^\W+&');
+      assert.equal(form.passRegEx, '^\W+$');
     })
   })
 })
